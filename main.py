@@ -45,4 +45,13 @@ for filepath in filepaths:
         pdf.cell(w=30, h=8, txt=str(row["price_per_unit"]), border=1)
         pdf.cell(w=30, h=8, txt=str(row["total_price"]), border=1, ln = 1)
 
+
+
+    # Add company name and logo
+    pdf.set_font(family="Times", size=13, style="B")
+    pdf.cell(w=25, h=8, txt=f"PythowHow")
+    pdf.image("pythonhow.png", w=10)
+
+
+
     pdf.output(f"PDFs/{filename}.pdf")
